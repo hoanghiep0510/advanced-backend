@@ -1,5 +1,6 @@
 package org.hoanghiep.advanced_backend.infrastructure.repository;
 
+import lombok.SneakyThrows;
 import net.datafaker.Faker;
 import org.hoanghiep.advanced_backend.domain.airport.entity.Airport;
 import org.hoanghiep.advanced_backend.domain.airport.repository.AirportRepository;
@@ -12,7 +13,9 @@ import java.util.List;
 @Repository
 public class AirportRepositoryImpl implements AirportRepository {
     @Override
+    @SneakyThrows
     public List<Airport> findAll() {
+        Thread.sleep(5000);
         Faker faker = new Faker();
         List<Airport> airports = new ArrayList<>();
 
