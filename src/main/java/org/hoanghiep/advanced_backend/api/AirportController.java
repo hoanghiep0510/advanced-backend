@@ -20,4 +20,9 @@ public class AirportController {
     List<AirportResponse> list() {
         return airportService.getAll();
     }
+
+    @GetMapping("/list-cache")
+    List<AirportResponse> listCache() {
+        return airportService.getAllCache();
+    }
 }
